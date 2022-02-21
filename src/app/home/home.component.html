@@ -1,1 +1,68 @@
-<p>home works!</p>
+<section class="row justify-content-center">
+    <div class="col-md-8 mt-md-4">
+        <h3>Daniel Oy</h3>
+        <h6>Systems Engineer | .NET Developer | Full Stack Developer in progress⏲️</h6>
+        <p>Welcome to my portfolio. I'm a developer with +3 years of experience
+            developing applications to solve user problems. Nowadays, I'm exploring Web technologies to
+            complete
+            my tecnologic stack and position myself as full stack developer. I still have a long path to complete, but
+            discipline and
+            constance are my main values.
+        </p>
+    </div>
+    <div class="col-md-2 mt-md-4 d-flex justify-content-center">
+        <img src="https://media-exp1.licdn.com/dms/image/C5603AQGM04W4txfEXg/profile-displayphoto-shrink_200_200/0/1614545449478?e=1648684800&v=beta&t=QWaqkXEaoICkURu85hI-G0lxGZRw6lL0zw1qY5MYBag"
+            alt="" class="border border-light rounded-circle">
+    </div>
+</section>
+
+<section class="row mt-2 col-md-10 offset-md-1 justify-content-around">
+    <h4>Qualifications</h4>
+    <div *ngFor="let qualification of qualifications" class="col-12 col-lg-3 m-1 card bg-light">
+        <div class="card-body">
+            <div class="card-title">{{qualification.title}}</div>
+            <p>
+                {{qualification.description}}
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="row mt-5 col-md-10 offset-md-1 justify-content-around">
+    <h4>Tecnologies & Tools</h4>
+    <ng-container *ngFor="let skill of skills">
+        <ng-template #popTemplate>
+            <p>{{skill.description}}</p>
+            <progressbar [value]="skill.experiencePorcentage" [type]="skill.experiencePorcentage<51? 'warning':'info'"
+                [striped]="true" [animate]="true">{{skill.experience}}</progressbar>
+        </ng-template>
+        <img style="cursor: pointer;" popoverTitle="{{skill.name}}" [popover]="popTemplate"
+            triggers="mouseenter:mouseleave" class="img img-fluid img-logo" src="{{skill.image}}" alt="{{skill.name}}">
+    </ng-container>
+</section>
+
+<section class="row mt-5 col-md-10 offset-md-1 justify-content-around">
+    <h4>Projects</h4>
+    <div class="my-2 col-12 col-lg-9">
+        <carousel style="cursor: pointer;" [pauseOnFocus]="true" [isAnimated]="true"
+            (activeSlideChange)="activeSlideIndex=$event">
+            <slide *ngFor="let project of projects">
+                <a href="{{project.url}}">
+                    <img src="{{project.image}}" alt="{{project.name}}" style="display: block; width: 100%;">
+                </a>
+            </slide>
+        </carousel>
+    </div>
+    <div class="col-12 col-lg-3 pt-3 pt-lg-0">
+        <h5>{{projects[activeSlideIndex].name}}</h5>
+        <p><small>
+                {{projects[activeSlideIndex].description}}
+            </small>
+        </p>
+        <strong>Tecnologies</strong>
+        <br>
+        <ng-container *ngFor="let tecnology of projects[activeSlideIndex].tecnologies">
+            <img src="{{tecnology.badgeUrl}}" alt="{{tecnology.name}}" class="p-1">
+        </ng-container>
+    </div>
+</section>

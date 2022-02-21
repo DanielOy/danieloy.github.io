@@ -1,1 +1,58 @@
-<p>nav-bar works</p>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" style="display: block;">
+    <div class="container-fluid mx-2">
+        <div class="navbar-header">
+            <a routerLink="/" class="navbar-brand">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                &nbsp;Portfolio | Daniel Oy
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+            aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row-reverse" [collapse]="isCollapsed">
+            <div class="nav navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a routerLink="/education" class="nav-link disabled m-1">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        Education
+                    </a>
+                </li>
+                <li class="nav-item disabled">
+                    <a routerLink="/experience" class="nav-link disabled m-1">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        Experience
+                    </a>
+                </li>
+                <li class="nav-item disabled dropdown m-1" dropdown>
+                    <a class="nav-link disabled dropdown-toggle" dropdownToggle role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                        Projects</a>
+                    <ul class="dropdown-menu" *dropdownMenu aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="http://www.tellme.com.mx/" target="_blank">Tell Me</a></li>
+                        <li><a class="dropdown-item" href="#">Fashion Like</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/projects">All Projects</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item align-self-center">
+                    <a href="https://github.com/DanielOy" target="_blank" class="m-1" style="color: whitesmoke;">
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    </a>
+               
+                    <a href="https://www.linkedin.com/in/daniel-oy-mis/" target="_blank" class="m-1"
+                        style="color: whitesmoke;">
+                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                    </a>
+              
+                    <a href="mailto:daniel-oy-mis@hotmail.com" class="m-1" style="color: whitesmoke;">
+                        <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+</nav>

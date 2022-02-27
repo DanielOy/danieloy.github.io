@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '@core/services/theme.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,7 +11,8 @@ export class NavBarComponent implements OnInit {
   isCollapsed: boolean = true;
   nextLanguage: string;
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService,
+    private theme: ThemeService) {
     this.nextLanguage = (translate.currentLang || translate.defaultLang)
     this.calculeNextLanguage();
   }
@@ -23,7 +25,20 @@ export class NavBarComponent implements OnInit {
 
   switchLang() {
     this.translate.use(this.nextLanguage);
+    localStorage.setItem('lang', this.nextLanguage);
     this.calculeNextLanguage();
+  }
+
+  switchTheme() {
+    if (this.theme.current === 'light') {
+      this.theme.current = 'dark';
+    } else {
+      this.theme.current = 'light';
+    }
+  }
+
+  isCurrenThemeLight() {
+    return this.theme.current == 'light';
   }
 }
 

@@ -37,14 +37,24 @@
                             "src/styles.scss",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-                            "node_modules/bootswatch/dist/cyborg/bootstrap.min.css",
+                            {
+                                "input": "node_modules/bootswatch/dist/cyborg/bootstrap.min.css",
+                                "bundleName": "dark",
+                                "inject": false
+                            },
+                            {
+                                "input": "node_modules/bootswatch/dist/flatly/bootstrap.min.css",
+                                "bundleName": "light",
+                                "inject": false
+                            },
                             "node_modules/font-awesome/css/font-awesome.min.css"
                         ],
                         "scripts": []
                     },
                     "configurations": {
                         "production": {
-                            "budgets": [{
+                            "budgets": [
+                                {
                                     "type": "initial",
                                     "maximumWarning": "700kb",
                                     "maximumError": "1mb"
@@ -55,10 +65,12 @@
                                     "maximumError": "4kb"
                                 }
                             ],
-                            "fileReplacements": [{
-                                "replace": "src/environments/environment.ts",
-                                "with": "src/environments/environment.prod.ts"
-                            }],
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.prod.ts"
+                                }
+                            ],
                             "outputHashing": "all"
                         },
                         "development": {

@@ -5,6 +5,9 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { RouterModule } from '@angular/router';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar'
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [NavBarComponent],
@@ -12,8 +15,20 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar'
     CommonModule,
     RouterModule,
     CollapseModule,
-    BsDropdownModule
+    BsDropdownModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
-  exports: [NavBarComponent]
+  exports: [NavBarComponent, TranslateModule]
 })
 export class CoreModule { }
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

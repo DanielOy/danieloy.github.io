@@ -12,5 +12,11 @@
         "tecnologiesTools":"Tecnologias & Herramientas",
         "projects":"Proyectos",
         "tecnologies":"Tecnologias"
+    },
+    "education":{
+        "includeCourses":"Incluir cursos"
+    },
+    "experience":{
+        "includeProjects":"Incluir proyectos"
     }
 }

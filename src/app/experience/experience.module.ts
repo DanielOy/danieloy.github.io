@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExperienceComponent } from './experience.component';
 import { ExperienceRoutingModule } from './experience-routing.module';
+import { SharedModule } from '@shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -11,7 +13,9 @@ import { ExperienceRoutingModule } from './experience-routing.module';
   ],
   imports: [
     CommonModule,
-    ExperienceRoutingModule
+    ExperienceRoutingModule,
+    SharedModule,
+    TranslateModule
   ]
 })
 export class ExperienceModule { }

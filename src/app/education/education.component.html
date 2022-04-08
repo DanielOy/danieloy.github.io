@@ -1,1 +1,16 @@
-<p>education works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-3 pt-5 ms-5 ms-md-0">
+            <div class="form-check align-self-center">
+                <input class="form-check-input" type="checkbox" #chkCourses id="chkCourses"
+                    (change)="selectionChanged()">
+                <label class="form-check-label" for="chkCourses">
+                    {{'education.includeCourses' | translate}}
+                </label>
+            </div>
+        </div>
+        <div class="col-12 col-md-9">
+            <app-timeline [events]="(events$ | async)??[]"></app-timeline>
+        </div>
+    </div>
+</div>

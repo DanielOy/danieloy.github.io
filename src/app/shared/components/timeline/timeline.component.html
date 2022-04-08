@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="timeline">
+        <div *ngFor="let item of events" class="timeline-event" style="cursor: pointer;" 
+        (click)="openModal(item)">
+            <div class="timeline-event-content">
+                <span class="date">{{item.date}}</span>
+                <h1>{{item.title}}</h1>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

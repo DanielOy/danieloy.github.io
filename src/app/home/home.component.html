@@ -23,11 +23,11 @@
 </section>
 
 <section class="row mt-5 col-md-10 offset-md-1 justify-content-around">
-    <h4>{{'home.tecnologiesTools'| translate}}</h4>
+    <h4>{{'home.technologiesTools'| translate}}</h4>
     <ng-container *ngFor="let skill of (skills$ | async)">
         <ng-template #popTemplate>
             <p>{{skill.description}}</p>
-            <progressbar [value]="skill.experiencePorcentage" [type]="skill.experiencePorcentage<51? 'warning':'info'"
+            <progressbar [value]="skill.experiencePercentage" [type]="skill.experiencePercentage<51? 'warning':'info'"
                 [striped]="true" [animate]="true">{{skill.experience}}</progressbar>
         </ng-template>
         <img style="cursor: pointer;" popoverTitle="{{skill.name}}" [popover]="popTemplate"
@@ -53,10 +53,10 @@
                 {{projects[activeSlideIndex].description}}
             </small>
         </p>
-        <strong>{{'home.tecnologies' | translate}}</strong>
+        <strong>{{'home.technologies' | translate}}</strong>
         <br>
-        <ng-container *ngFor="let tecnology of projects[activeSlideIndex].tecnologies">
-            <img src="{{tecnology.badgeUrl}}" alt="{{tecnology.name}}" class="p-1">
+        <ng-container *ngFor="let technology of projects[activeSlideIndex].technologies">
+            <img src="{{technology.badgeUrl}}" alt="{{technology.name}}" class="p-1">
         </ng-container>
     </div>
 </section>

@@ -1,17 +1,17 @@
 {
     "navbar": {
         "title": "Portafolio | Daniel Oy",
-        "education": "Educacion",
+        "education": "Educación",
         "experience": "Experiencia",
         "projects": "Proyectos"
     },
     "home": {
         "header": "Ingeniero en Sistemas | Desarrollador .NET | Desarrollador Full Stack en proceso",
-        "description":"Bienvenido a mi portafolio. Soy desarrollador .NET con +3 años de experiencia desarrollando aplicaciones para resolver problemas de usuarios. Actualmente estoy explorando tecnologías Web para completar mi stack tecnológico y posicionarme como desarrollador full stack. Aún tengo un largo camino que completar, pero la disciplina y constancia son mis principales valores.",
+        "description":"Bienvenido a mi portafolio. Soy desarrollador .NET con +5 años de experiencia desarrollando aplicaciones para resolver problemas de usuarios. Actualmente estoy explorando tecnologías Web para completar mi stack tecnológico y posicionarme como desarrollador full stack. Aún tengo un largo camino que completar, pero la disciplina y constancia son mis principales valores.",
         "qualifications":"Aptitudes",
-        "tecnologiesTools":"Tecnologias & Herramientas",
+        "technologiesTools":"Tecnologías & Herramientas",
         "projects":"Proyectos",
-        "tecnologies":"Tecnologias"
+        "technologies":"Tecnologías"
     },
     "education":{
         "includeCourses":"Incluir cursos"

@@ -1,11 +1,11 @@
 export interface Project {
     name: string;
     description: string;
-    tecnologies: Tecnology[],
+    technologies: Technology[],
     image: string;
     url: string;
 }
-export interface Tecnology{
+export interface Technology{
     name:string;
     badgeUrl:string;
 }

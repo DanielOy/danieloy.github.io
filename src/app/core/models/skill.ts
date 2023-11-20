@@ -3,5 +3,5 @@ export interface Skill {
     image:string;
     description:string;
     experience:string;
-    experiencePorcentage:number;
+    experiencePercentage:number;
 }

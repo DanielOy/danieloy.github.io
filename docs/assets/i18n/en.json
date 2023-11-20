@@ -7,11 +7,11 @@
     },
     "home": {
         "header": "Systems Engineer | .NET Developer | Full Stack Developer in progress",
-        "description":"Welcome to my portfolio. I'm a .NET developer with +3 years of experience developing applications to solve user problems. Nowadays, I'm exploring Web technologies to complete my technologic stack and position myself as full stack developer. I still have a long path to complete, but discipline and constancy are my main values.",
+        "description":"Welcome to my portfolio. I'm a .NET developer with +5 years of experience developing applications to solve user problems. Nowadays, I'm exploring Web technologies to complete my technology stack and position myself as full stack developer. I still have a long path to complete, but discipline and constancy are my main values.",
         "qualifications":"Aptitudes",
-        "tecnologiesTools":"Tecnologies & Tools",
+        "technologiesTools":"Technologies & Tools",
         "projects":"Projects",
-        "tecnologies":"Tecnologies"
+        "technologies":"Technologies"
     },
     "education":{
         "includeCourses":"Include courses"

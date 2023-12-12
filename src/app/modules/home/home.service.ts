@@ -55,7 +55,8 @@ export class HomeService {
         },
         {
             name: 'Skinet', description: 'E-commerce application built with Angular and .NET Core. As part of a Udemy course, I created this application where I learned to use the repository and specifications patterns, use Entity Framework Core, stripe for online payments, design patterns, error handling and other things.',
-            image: '../../assets/images/skinet-project.png', url: "https://github.com/DanielOy/Skinet",
+            image: '../../assets/images/skinet-project.png',
+            url: "https://ski-net.azurewebsites.net",
             technologies: [
                 { name: 'Angular', badgeUrl: 'https://img.shields.io/badge/Angular-DD0031?style=plastic&logo=angular&logoColor=white' },
                 { name: '.NET Core', badgeUrl: 'https://img.shields.io/badge/.NET-5C2D91?style=plastic&logo=.net&logoColor=white' },
@@ -79,7 +80,8 @@ export class HomeService {
         },
         {
             name: 'Skinet', description: 'Aplicación de comercio electrónico construida con Angular y .NET Core. Como parte un curso de Udemy, Cree esta aplicación donde aprendí a usar el patrón de repositorios y especificaciones, usar Entity Framework Core, stripe para pagos en línea, patrones de diseño, manejo de errores, entre otras cosas.',
-            image: '../../assets/images/skinet-project.png', url: "https://github.com/DanielOy/Skinet",
+            image: '../../assets/images/skinet-project.png', 
+            url: "https://ski-net.azurewebsites.net",
             technologies: [
                 { name: 'Angular', badgeUrl: 'https://img.shields.io/badge/Angular-DD0031?style=plastic&logo=angular&logoColor=white' },
                 { name: '.NET Core', badgeUrl: 'https://img.shields.io/badge/.NET-5C2D91?style=plastic&logo=.net&logoColor=white' },

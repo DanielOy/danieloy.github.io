@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PopoverModule } from 'ngx-bootstrap/popover';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './modules/home/home.component';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 @NgModule({

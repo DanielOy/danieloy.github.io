@@ -1,0 +1,13 @@
+services: 
+  angular:
+    build: ./
+    stdin_open: true
+    tty: true
+    volumes: 
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - '4200:4200'
+      - '49153:49153'
+    container_name: angular-app
+    working_dir: /app
